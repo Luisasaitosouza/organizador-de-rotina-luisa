@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', 'Trebuchet MS', serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0a07 0%, #1c120c 50%, #261710 100%);
+  color: #f5ebe0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Canvas 3D de Fundo */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+header h1 {
+  font-size: 3.1rem;
+  background: linear-gradient(45deg, #d4a373, #c87d55, #a44a3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+header p {
+  color: #d5bdaf;
+  margin-top: 8px;
+  font-size: 1.15rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grid Layout dos Cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Estilo Rústico dos Cards com textura de couro/madeira */
+.card {
+  background: rgba(38, 23, 16, 0.65);
+  border: 1px solid rgba(212, 163, 115, 0.35);
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.65), inset 0 0 18px rgba(164, 74, 63, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) rotateX(4deg) rotateY(4deg);
+  box-shadow: 0 18px 35px rgba(200, 125, 85, 0.3), inset 0 0 22px rgba(212, 163, 115, 0.25);
+  border-color: #d4a373;
+}
+
+.card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e3b27d;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  color: #d5bdaf;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  background: linear-gradient(45deg, #a44a3f, #c87d55, #d4a373);
+  color: #140c08;
+  border: 1px solid #e3b27d;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.04);
+}
+
+/* Modal Rústico */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 6, 4, 0.88);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #24150e, #140b07);
+  border: 2px solid #c87d55;
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 520px;
+  position: relative;
+  box-shadow: 0 0 35px rgba(200, 125, 85, 0.35);
+  animation: modalAnim 0.3s ease-out forwards;
+}
+
+@keyframes modalAnim {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  color: #d5bdaf;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #d4a373;
+}
+
+.modal-content h2 {
+  color: #d4a373;
+  margin-bottom: 16px;
+  font-size: 1.55rem;
+}
+
+.modal-content p {
+  color: #ede0d4;
+  margin-bottom: 25px;
+  line-height: 1.65;
+  font-size: 0.98rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-link {
+  display: inline-block;
+  background: linear-gradient(90deg, #a44a3f, #c87d55, #d4a373);
+  color: #140c08;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-link:hover {
+  transform: scale(1.05);
+}

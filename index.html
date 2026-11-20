@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RanchoSync 3D - Rotina 3º Ano & Três Tambores 🐎</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas 3D de Fundo -->
+  <canvas id="bg-canvas"></canvas>
+
+  <header>
+    <h1>RanchoSync 3D 🐎</h1>
+    <p>Rotina rústica: 3º Ano do Ensino Médio, Academia & Três Tambores 👢✨</p>
+  </header>
+
+  <main class="grid-container">
+    <!-- Card Estudo -->
+    <div class="card" onclick="openModal('modal-estudo')">
+      <div class="card-icon">📚🕯️</div>
+      <h2>Estudos & 3º Ano</h2>
+      <p>Escola pela manhã (07h-12h) e revisões consistentes para o vestibular à tarde.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+
+    <!-- Card Três Tambores -->
+    <div class="card" onclick="openModal('modal-tambores')">
+      <div class="card-icon">🐎🛢️</div>
+      <h2>Três Tambores</h2>
+      <p>Treinos em pista, conexão com o cavalo, técnica de contorno e preparo para provas.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+
+    <!-- Card Academia -->
+    <div class="card" onclick="openModal('modal-academia')">
+      <div class="card-icon">🏋️‍♀️🔥</div>
+      <h2>Academia & Força</h2>
+      <p>Musculação e condicionamento físico para dar estabilidade e resistência na sela.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+
+    <!-- Card Lazer -->
+    <div class="card" onclick="openModal('modal-lazer')">
+      <div class="card-icon">🔥🎸</div>
+      <h2>Lazer & Descanso</h2>
+      <p>Noites tranquilas, música sertaneja/country, filmes e rodeios no fim de semana.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+
+    <!-- Card Hobby -->
+    <div class="card" onclick="openModal('modal-hobby')">
+      <div class="card-icon">🤠🧶</div>
+      <h2>Hobbies & Campo</h2>
+      <p>Cuidados com a tralha, fotografia rural, leitura ou atividades ao ar livre.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+
+    <!-- Card Saúde -->
+    <div class="card" onclick="openModal('modal-saude')">
+      <div class="card-icon">🥩💧</div>
+      <h2>Saúde & Recuperação</h2>
+      <p>Alimentação reforçada, hidratação e 8h de sono para render na escola e na pista.</p>
+      <button class="btn">Ver Detalhes 🌾</button>
+    </div>
+  </main>
+
+  <!-- MODAIS -->
+
+  <!-- Modal Estudo -->
+  <div id="modal-estudo" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-estudo')">&times;</span>
+      <h2>📚 Cronograma 3º Ano & Vestibular</h2>
+      <p><strong>• Seg a Sex (07:00 - 12:00):</strong> Aulas do 3º Ano do Ensino Médio.<br>
+         <strong>• Seg a Sex (13:30 - 15:30):</strong> Bloco Fixo de Estudos (Tarefas, resumos, redação e exercícios ENEM).<br>
+         <strong>• Sábado (09:00 - 11:00):</strong> Simulado ou revisão semanal leve.</p>
+      <a href="estudo.html" class="modal-link">Abrir Página de Estudos &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Modal Três Tambores -->
+  <div id="modal-tambores" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-tambores')">&times;</span>
+      <h2>🐎 Treinos de Três Tambores</h2>
+      <p><strong>• Terça e Quinta (16:00 - 18:00):</strong> Treino técnico na pista (contorno de tambores, arrancada e controle).<br>
+         <strong>• Sábado à Tarde:</strong> Treino livre, cuidados com o cavalo ou participação em provas.</p>
+      <a href="tambores.html" class="modal-link">Abrir Página Três Tambores &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Modal Academia -->
+  <div id="modal-academia" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-academia')">&times;</span>
+      <h2>🏋️‍♀️ Treinos de Academia</h2>
+      <p><strong>• Segunda, Quarta e Sexta (16:00 - 17:15):</strong> Treino de força (foco em core, pernas e lombar para firmeza na montaria).<br>
+         <strong>• Objetivo:</strong> Resistência física e prevenção de lesões.</p>
+      <a href="academia.html" class="modal-link">Abrir Página de Academia &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Modal Lazer -->
+  <div id="modal-lazer" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-lazer')">&times;</span>
+      <h2>🔥 Lazer & Descompressão</h2>
+      <p><strong>• Segunda a Sexta (19:30 em diante):</strong> Noites livres para descansar, ouvir música ou assistir séries.<br>
+         <strong>• Domingo:</strong> Descanso total, encontro com amigos e família.</p>
+      <a href="lazer.html" class="modal-link">Abrir Página de Lazer &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Modal Hobby -->
+  <div id="modal-hobby" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-hobby')">&times;</span>
+      <h2>🤠 Hobbies & Vida Rural</h2>
+      <p><strong>• Quartas e Sextas (18:00 - 19:00):</strong> Limpeza e manutenção das selas/tralhas, fotografia ou leitura.<br>
+         <strong>• Finais de Semana:</strong> Cavalgadas tranquilas e contato com a natureza.</p>
+      <a href="hobby.html" class="modal-link">Abrir Página de Hobbies &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Modal Saúde -->
+  <div id="modal-saude" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-saude')">&times;</span>
+      <h2>🥩 Saúde & Bem-Estar</h2>
+      <p><strong>• Almoço (12:00 - 13:30):</strong> Refeição nutritiva e descanso pós-escola.<br>
+         <strong>• Hidratação:</strong> Mínimo de 2,5L de água por dia (essencial para o sol da pista e treino).<br>
+         <strong>• Sono:</strong> Dormir até às 22:30 para acordar disposta às 06:00.</p>
+      <a href="saude.html" class="modal-link">Abrir Página de Saúde &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <script>
+    // --- LÓGICA DOS MODAIS ---
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+
+    // --- ANIMAÇÃO 3D EM BACKGROUND (ESTILO RÚSTICO: COBRE, COURO E DOURADO) ---
+    const canvas = document.getElementById('bg-canvas');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Formas 3D geométricas rústicas (Cilindros lembrando tambores, Octaedros e Toros)
+    const shapes = [];
+    const geometries = [
+      new THREE.CylinderGeometry(0.6, 0.6, 1.2, 16),
+      new THREE.TorusGeometry(0.75, 0.25, 12, 40),
+      new THREE.OctahedronGeometry(0.9)
+    ];
+
+    // Material Cobre / Bronze Rústico
+    const material = new THREE.MeshStandardMaterial({
+      color: 0xc87d55,
+      wireframe: true,
+      roughness: 0.6,
+      metalness: 0.5
+    });
+
+    for (let i = 0; i < 24; i++) {
+      const randomGeom = geometries[Math.floor(Math.random() * geometries.length)];
+      const mesh = new THREE.Mesh(randomGeom, material);
+      
+      mesh.position.x = (Math.random() - 0.5) * 30;
+      mesh.position.y = (Math.random() - 0.5) * 30;
+      mesh.position.z = (Math.random() - 0.5) * 30;
+
+      mesh.rotation.x = Math.random() * Math.PI;
+      mesh.rotation.y = Math.random() * Math.PI;
+
+      shapes.push({
+        mesh: mesh,
+        rotSpeedX: (Math.random() - 0.5) * 0.015,
+        rotSpeedY: (Math.random() - 0.5) * 0.015
+      });
+
+      scene.add(mesh);
+    }
+
+    // Iluminação quente (Âmbar, Terracota e Dourado)
+    const pointLight1 = new THREE.PointLight(0xd4a373, 2.2);
+    pointLight1.position.set(10, 10, 10);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0xa44a3f, 1.8);
+    pointLight2.position.set(-10, -10, -10);
+    scene.add(pointLight2);
+
+    const ambientLight = new THREE.AmbientLight(0x8c5a3c, 1.2);
+    scene.add(ambientLight);
+
+    camera.position.z = 15;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      shapes.forEach(item => {
+        item.mesh.rotation.x += item.rotSpeedX;
+        item.mesh.rotation.y += item.rotSpeedY;
+      });
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
